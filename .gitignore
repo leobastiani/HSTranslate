@@ -1,0 +1,6 @@
+*.pyc
+
+/cardsNames/*.txt
+/jsBeautiful/*.js
+/jsFinal/*.js
+/languagesJSON/*.json

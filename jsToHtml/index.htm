@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>All languages</title>
+	<link rel="stylesheet" href="">
+	<script src="js/jquery.js"></script>
+	<style type="text/css">
+	#allLanguagesDiv a {
+    border: 1px solid #000;
+    display: block;
+    float: left;
+    padding: 25px;
+    margin: 10px;
+    cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="howTo">
+		How to use:
+		Create a new favorite pressing <b>CTRL+D</b>,<br/>
+		<b>Edit</b> this favorite,<br/>
+		On the <b>URL</b> field, <b>paste</b> the content of some link<br/>
+		Run the script<br/>
+	</div>
+
+	<div id="allLanguagesDiv"></div>
+	<script>
+	$(document).ready(function() {
+		var allLanguages = [
+	    'deDE',
+	    'enUS',
+	    'esES',
+	    'esMX',
+	    'frFR',
+	    'itIT',
+	    'jaJP',
+	    'koKR',
+	    'plPL',
+	    'ptBR',
+	    'ruRU',
+	    'thTH',
+	    'zhCN',
+	    'zhTW'
+		];
+
+
+		allLanguages.forEach(function (language, index) {
+			var content = $('<a>');
+
+			content.html(language);
+			content.addClass('languageLink');
+
+			content.attr('href', language+'.htm');
+
+			content.appendTo($('#allLanguagesDiv'));
+		});
+
+	});
+	</script>
+</body>
+</html>
